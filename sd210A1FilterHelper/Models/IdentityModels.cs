@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using sd210A1FilterHelper.Models.Domain;
 
 namespace sd210A1FilterHelper.Models
 {
@@ -20,6 +21,8 @@ namespace sd210A1FilterHelper.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<ActionLog> ActionLogs { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

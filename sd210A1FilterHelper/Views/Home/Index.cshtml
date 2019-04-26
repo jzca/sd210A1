@@ -29,3 +29,14 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<h2>@true.ToYesOrNo()</h2>
+<h2>@false.ToYesOrNo()</h2>
+
+@Html.BootstapModalTrigger()
+@Html.BootstrapModal("sd210-a1", @"Create a C# ASP.NET MVC application with Individual User Accounts and implement the following features:
+1 – Create an action filter to log the action name, controller name and the execution time(milliseconds) of a request.The information should be logged to a SQL SERVER database.The Stopwatch class can be used to count the execution time.
+2 – Create an action filter to detect if the request comes from googlebot.In case it does, stop the request or return a blank page in order to stop the bot from checking the contents of the page.The UserAgent property on the Request can be checked to decide if the request should continue or not. Your filter doesn’t need to be “fool-proof”.
+3 – Create a HTML Helper to generate the markup for a bootstrap modal window and the button to open it. The helper should be reusable (able to use multiple times on the same page) and allow the user to specify the title and the body of the modal window.
+4 – Create an extension method that returns “Yes” or “No” as string based on a Boolean value.
+")
