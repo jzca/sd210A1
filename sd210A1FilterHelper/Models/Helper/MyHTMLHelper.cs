@@ -8,22 +8,15 @@ namespace sd210A1FilterHelper.Models.Helper
 {
     public static class MyHTMLHelper
     {
-        public static MvcHtmlString BootstapModalTrigger(this HtmlHelper html)
+
+        public static MvcHtmlString BootstrapModal(this HtmlHelper html, string id, string title, string message)
         {
             return MvcHtmlString
                 .Create($@"
-                        <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>
+                        <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#{id}' style='margin: 10px 5px;'>
                           Launch demo modal
-                        </button>"
-                );
-
-    }
-
-
-    public static MvcHtmlString BootstrapModal(this HtmlHelper html, string title, string message)
-        {
-            return MvcHtmlString
-                .Create($@"<div class='modal' id='exampleModal' tabindex='-1' role='dialog'>
+                        </button>
+                            <div class='modal' id='{id}' tabindex='-1' role='dialog'>
                              < div class='modal-dialog' role='document'>
                                <div class='modal-content'>
                                  <div class='modal-header'>

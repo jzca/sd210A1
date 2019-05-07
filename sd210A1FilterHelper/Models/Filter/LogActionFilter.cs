@@ -40,6 +40,7 @@ namespace sd210A1FilterHelper.Models.Filter
         //Before action executes
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            StopWatch.Reset();
             StopWatch.Start();
         }
 
